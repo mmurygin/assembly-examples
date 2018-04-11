@@ -22,11 +22,6 @@ syscall
 # Переход на конец программы
 call exit
 
-msg:
-    .ascii "Hello, world\n"
-
-len = . - msg
-
 exit:
     # Системный вызов exit, аргументы
     #   - 0: номер системного вызова (60)
@@ -36,3 +31,8 @@ exit:
     mov $0, %rdi
     syscall
 
+.data
+msg:
+    .ascii "Hello, world!\n"
+
+len = . - msg

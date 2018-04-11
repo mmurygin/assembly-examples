@@ -1,5 +1,5 @@
-all: main.s
-	gcc -c main.s -o ./hello.o
+all: main.asm
+	nasm -f elf64 -o hello.o main.asm
 	ld ./hello.o -o ./hello.out
 
 clean:
