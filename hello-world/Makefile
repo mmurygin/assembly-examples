@@ -1,7 +1,0 @@
-all: main.s
-	gcc -c main.s -o ./hello.o
-	ld ./hello.o -o ./hello.out
-
-clean:
-	-rm *.o
-	-rm *.out
