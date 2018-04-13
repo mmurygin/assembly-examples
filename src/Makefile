@@ -13,5 +13,10 @@ who-are-you:
 	ld ../bin/who-are-you.o -o ../bin/who-are-you
 	../bin/who-are-you
 
+print-number:
+	nasm -f elf64 -o ../bin/print-number.o print-number.asm
+	ld ../bin/print-number.o -o ../bin/print-number
+	../bin/print-number
+
 clean:
 	rm ../bin/*
