@@ -18,5 +18,10 @@ print-number:
 	ld ../bin/print-number.o -o ../bin/print-number
 	../bin/print-number
 
+macros:
+	nasm -f elf64 -o ../bin/macros.o macros.asm
+	ld ../bin/macros.o -o ../bin/macros
+	../bin/macros
+
 clean:
 	rm ../bin/*
